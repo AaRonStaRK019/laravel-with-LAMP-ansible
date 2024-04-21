@@ -6,7 +6,7 @@ NC='\033[0m' # No Color
 
 echo 'Deploying Laravel app to server using LAMP Stack'
 
-echo "${PURPLE}----- Script by Nuel - https://github.com/AaRonStaRK019 -----${NC}"
+echo -e "${PURPLE}----- Script by Nuel - https://github.com/AaRonStaRK019 -----${NC}"
 
 echo 'Grab a coffee and let the magic happen . . .'
 
@@ -162,4 +162,4 @@ echo
 echo -e "${GREEN}===== Laravel application is ready to go. =====${NC}"
 echo
 echo
-echo "${PURPLE}----- Script by Nuel - https://github.com/AaRonStaRK019 -----${NC}"
+echo -e "${PURPLE}----- Script by Nuel - https://github.com/AaRonStaRK019 -----${NC}"
