@@ -36,4 +36,4 @@ You may need to customize the playbook and scripts according to your specific en
 
 Feel free to contribute to this repository by submitting pull requests or reporting issues.
 
-Find step by step process in [steps](./steps.md)
+For a step-by-step process of the deployment, check [steps](./STEPS.md)
