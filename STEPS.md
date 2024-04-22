@@ -22,7 +22,7 @@ Ansible playbook - [ansible playbook](./execute_script.yml)
 
 ![ansible ping test](./img/05_ansible-ping-test.png)
 
-6. `run ansible playbook
+6. `run ansible playbook`
 
 ![run playbook](./img/06_run%20ansible%20playbook.png)
 
