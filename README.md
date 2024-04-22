@@ -6,6 +6,4 @@ Bash script - [bash script](./deploy_laravel.sh)
 
 Ansible playbook - [ansible playbook](./execute_script.yml)
 
-![script and playbook present](./img/01_script&playbook.png)
-
 
