@@ -6,4 +6,4 @@ Bash script - [bash script](./deploy_laravel.sh)
 
 Ansible playbook - [ansible playbook](./execute_script.yml)
 
-
+1. `change directory using the absolute pathname`
