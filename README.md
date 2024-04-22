@@ -14,11 +14,11 @@ Ansible installed on the machine you will run the playbook from.
 
 1. Clone this repository to your local machine:
 
-git clone https://github.com/AaRonStaRK019/laravel-with-LAMP-ansible.git
+_git clone https://github.com/AaRonStaRK019/laravel-with-LAMP-ansible.git_
 
 2. Navigate to the repository directory:
 
-cd laravel-with-LAMP-ansible
+_cd laravel-with-LAMP-ansible_
 
 3. Modify the host file - 'nodes' to include the IP address(es) or hostname of your Slave node.
 
@@ -26,7 +26,7 @@ cd laravel-with-LAMP-ansible
 
 5. Run the Ansible playbook:
 
-ansible-playbook -i nodes execute_script.yml
+_ansible-playbook -i nodes execute_script.yml_
 
 6. Once the playbook execution completes successfully, your Laravel application should be deployed on the Slave node. You can access it via the Slave node's IP address.
 
@@ -36,4 +36,4 @@ You may need to customize the playbook and scripts according to your specific en
 
 Feel free to contribute to this repository by submitting pull requests or reporting issues.
 
-For a step-by-step process of the deployment, check [steps](./STEPS.md)
+For a step-by-step process of the deployment, check _[steps](./STEPS.md)_
