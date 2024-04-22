@@ -1,49 +1,39 @@
-# laravel-with-LAMP-ansible
+# Laravel with LAMP Ansible Deployment
+
+This repository contains an Ansible playbook for automating the deployment of a Laravel application on a LAMP (Linux, Apache, MySQL, PHP) stack. It also includes a cron job to log server uptime.
+
+## Prerequisites
+
+Before running the Ansible playbook, ensure that you have:
+
+Two Ubuntu-based servers provisioned using Vagrant: one designated as the Master node and the other as the Slave node.
+Ansible installed on the machine you will run the playbook from.
 
 
+## Usage
 
-1. ` write up the bash script and ansible playbook to deploy the Laravel application and log Uptime`
+1. Clone this repository to your local machine:
 
-Bash script - [bash script](./deploy_laravel.sh) 
+git clone https://github.com/AaRonStaRK019/laravel-with-LAMP-ansible.git
 
-Ansible playbook - [ansible playbook](./execute_script.yml) 
+2. Navigate to the repository directory:
 
-2. `install ansible on master node`
+cd laravel-with-LAMP-ansible
 
-[install ansible](./img/02_ansible-on-master.png)
+3. Modify the host file - 'nodes' to include the IP address(es) or hostname of your Slave node.
 
-3. `verify ansible installation`
+4. Update the `deploy_laravel.sh` script with any changes you wish to make, if necessary.
 
-[verify ansible installation](./img/03_verify-ansible-inst.png)
+5. Run the Ansible playbook:
 
-4. `add the IP address of the slave VM to an inventory file`
+ansible-playbook -i nodes execute_script.yml
 
-[inventory file](./img/04_add_slave_to_inventory_file.png)
+6. Once the playbook execution completes successfully, your Laravel application should be deployed on the Slave node. You can access it via the Slave node's IP address.
 
-5. `run an ansible ping test to confirm connection to slave node`
+## Additional Notes
 
-[ansible ping test](./img/05_ansible-ping-test.png)
+You may need to customize the playbook and scripts according to your specific environment and requirements.
 
-6. `run the ansible playbook`
+Feel free to contribute to this repository by submitting pull requests or reporting issues.
 
-[run playbook](./img/06_run%20ansible%20playbook.png)
-
-7. `playbook adds crontab to log uptime`
-
-[cronjob](./img/07_adding-crontab.png)
-
-8. `playbook gets server response (200) from the Laravel application to show it works`
-
-[server response](./img/08_getting-server-response.png)
-
-9. `ensure there are no errors from running the playbook`
-
-[no errors](./img/09_no-error-on-playbook.png)
-
-10. `input the IP address into a browser window to view the Laravel application`
-
-[laravel app](./img/10_laravel-app-working.png)
-
-11. `confirm if cronjob was added to crontab` 
-
-[cronjob added](./img/11_cronjob-added.png)
+Find step by step process in [steps](./steps.md)
