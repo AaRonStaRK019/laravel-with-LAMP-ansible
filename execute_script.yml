@@ -1,0 +1,32 @@
+---
+- name: Deploy Laravel application on node and log Uptime
+  hosts: slave
+  become: true
+  tasks:
+    - name: Copy script and grant root permission
+      ansible.builtin.copy:
+        src: /home/vagrant/deploy-laravel-LAMP/deploy_laravel.sh
+        dest: /home/vagrant/deploy_laravel.sh
+        owner: root
+        group: root
+        mode: '0755'
+
+    - name: install LAMP stack and deploy laravel
+      script: /home/vagrant/deploy-laravel-LAMP/deploy_laravel.sh
+
+    - name: create cronjob - log uptime at midnight every day
+      cron:
+        name: Log Uptime
+        minute: 0
+        hour: 0
+        job: "uptime >> /home/vagrant/server-uptime.log"
+
+    - name: Ping Apache server to check functionality
+      uri:
+        url: "http://192.168.56.4/index.php"
+        method: GET
+      register: response
+
+    - name: Display response
+      debug:
+        var: response
